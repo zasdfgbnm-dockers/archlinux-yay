@@ -1,0 +1,24 @@
+name: docker-image
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: sudo docker build --pull --no-cache . --tag zasdfgbnm/archlinux-yay
+    - name: Publish the Docker image
+      run: |
+        docker login -u zasdfgbnm -p ${{secrets.zasdfgbnm_bot_dockerhub_password}}
+        docker push zasdfgbnm/archlinux-yay
