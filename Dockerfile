@@ -6,7 +6,7 @@ RUN ls /usr/lib/sysusers.d/*.conf | /usr/share/libalpm/scripts/systemd-hook sysu
 COPY remove-pkg-cache.hook /etc/pacman.d/hooks/
 COPY mirrorlist /etc/pacman.d/
 
-RUN sed -i "s/#Color/Color/g" /etc/pacman.conf
+RUN sed -i "s/\#Color/Color/g" /etc/pacman.conf
 COPY custom_repo.conf /
 RUN cat /custom_repo.conf >> /etc/pacman.conf
 
