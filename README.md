@@ -1,1 +1,1 @@
-[![Actions Status](https://github.com/zasdfgbnm-dockers/archlinux-yaourt/workflows/docker-image/badge.svg)](https://github.com/zasdfgbnm-dockers/archlinux-yaourt/actions)
+[![docker-image](https://github.com/zasdfgbnm-dockers/archlinux-yay/actions/workflows/docker-image.yml/badge.svg)](https://github.com/zasdfgbnm-dockers/archlinux-yay/actions/workflows/docker-image.yml)
