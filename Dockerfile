@@ -13,7 +13,8 @@ RUN cat /custom_repo.conf >> /etc/pacman.conf
 RUN rm -rf /etc/pacman.d/gnupg
 RUN pacman-key --init
 RUN pacman-key --populate archlinux
-RUN pacman -Sy --noconfirm archlinux-keyring archlinuxcn-keyring
+RUN pacman -Sy --noconfirm archlinux-keyring
+RUN pacman -Sy --noconfirm archlinuxcn-keyring
 
 RUN pacman -Syu --noconfirm
 RUN pacman -Sy --noconfirm sudo yay
