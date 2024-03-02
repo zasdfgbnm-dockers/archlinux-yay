@@ -14,6 +14,9 @@ RUN rm -rf /etc/pacman.d/gnupg
 RUN pacman-key --init
 RUN pacman-key --populate archlinux
 RUN pacman -Sy --noconfirm archlinux-keyring
+
+# https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/
+RUN pacman-key --lsign-key "farseerfc@archlinux.org"
 RUN pacman -Sy --noconfirm archlinuxcn-keyring
 
 RUN pacman -Syu --noconfirm
